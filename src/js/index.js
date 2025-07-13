@@ -73,7 +73,7 @@ class Task {
         const firstIndexTaskName = taskName[0];
         const taskNameLength = { min: 5, max: 35 };
         if (!isNaN(firstIndexTaskName)) return messageError (
-            true, "O nome da tarefa não deve começar com números."
+            true, "O nome da tarefa não deve começar com números ou espaços."
         )
 
         if (taskName.trim() === "") return messageError (
