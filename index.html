@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <main id="main_container">
+        <header id="header_container">
+            <div id="title_container">
+                <h1>Task Management</h1>
+            </div>
+            <nav id="navbar_container">
+                <button data-section="section_add_task" class="button">Tarefas</button>
+                <button data-section="section_logs" class="button">Atualizações</button>
+                <button data-section="section_settings" class="button">Configurações</button>
+            </nav>
+        </header>
+        <section id="section_container">
+            <section id="section_add_task" class="section">
+                <form id="container_add_task">
+                    <input type="text" placeholder="O que eu vou fazer?" id="input_task">
+                    <input type="submit" value="Add" id="input_submit_task">
+                    <input type="reset" value="Limpar" id="input_clean_task">
+                </form>
+                <div id="stats_tasks">
+                    <p>Concluídas: <span id="quantity_task_check" class="value_stats">0</span></p>
+                    <p>Pedentes: <span id="quantity_task_peding" class="value_stats">0</span></p>
+                    <p>Removidas: <span id="quantity_task_delete" class="value_stats">0</span></p>
+                </div>
+                <div id="container_tasks">
+                </div>
+            </section>
+            <section id="section_edit">
+                <input type="text" placeholder="Renomear tarefa" id="input_task_edit" />
+                <input type="submit" value="Editar" id="input_submit_task_edit">
+            </section>
+            <section id="section_logs" class="section" style="display: none;">
+            </section>
+            <section id="section_settings" class="section" style="display: none;">
+                <div id="container-settings">
+                    <div id="side">
+                        <input type="checkbox" id="change_side">
+                        <p>Alterar lado</p>
+                    </div>
+                    <button id="deleteAll_Tasks">Remover Tarefas</button>
+                </div>
+            </section>
+            <p id="message_error">Teste teste</p>
+        </section>
+    </main>
+    <script src="src/js/index.js"></script>
+</body>
+</html>
